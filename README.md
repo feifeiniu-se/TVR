@@ -20,11 +20,11 @@ This repository contains the prompt and results for our research paper **"TVR: A
 Please note that the dataset used in this paper originates from industrial data, and the LLMs utilized are services provided by our industry partners. As a result, we are unable to open-source our dataset and code. However, to promote transparency, we have open-sourced our experiment results and prompts.
 
 ### Prompts
-Please refer to prompts.md
+Please refer to Prompts.md
 
 ### Results
 
-Please refer to results.md
+Please refer to Results.md
 
 ### How to cite this paper
 

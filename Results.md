@@ -1,0 +1,23 @@
+### Example explainable results of VTR
+
+For a requirement pair with valid traceability link:
+
+```
+To evaluate if the message or signal from the stakeholder requirement is correctly covered by the system requirement, I'll focus speficially on the {SIGNAL1} mentioned in the stakeholder requirement.
+Step 1: Identify the relevant signal in the stakeholder requirement. The stakeholder requirement mentions: {SIGNAL1}.
+Step 2: Look for this signal or a related checks in the system requirement. In the system requirement, we can see the following relevant checks: {MODE_FAIL_TYPE_SIGNAL}.
+Step 3: Analyze the consistency. The system requirement checks for failures in {SIGNAL1}, which corresponds to the {MODE_FAIL_TYPE_SIGNAL1} signal mentioned in the stakeholder requirement.
+Step 4: Conclusion. The system requirement appears to be covered by the stakeholder requirement in terms of checking for failures in the {SIGNAL1} signal. The system requirement includes checks for {SIGNAL1}, which covers the stakeholder's requirement.
+Therefore, the response is: Yes
+```
+
+For a requirement pair with invalid traceability link:
+
+```
+To evaluate if the system requirement correctly covers the stakeholder requirement, I'll focus specifically on the {SIGNAL2} mentioned in the stakeholder requirement.
+Step 1: Identify the relevant part of the stakeholder requirement: - fail in {SIGNAL2}
+Step 2: Search for this specific signal in the system requirement: After carefully examining the system requirement, I don't see any explicit mention of {SIGNAL2} or a related fail check.
+Step 3: Evaluate the coverage: Since the specific signal ({SIGNAL2}) mentioned in the stakeholder requirement is not explicitly addressed in the system requirement, we cannot confirm that this particular fail check is being performed.
+Step 4: Conclusion: The system requirement does not appear to explicitly cover the fail check for {SIGNAL2} as specified in the stakeholder requirement. Therefore, the coverage is no.
+Response: No
+```

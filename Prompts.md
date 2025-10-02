@@ -2,7 +2,6 @@ Zero-Shot Prompt:
 
 ```
 Please check if the message or signal from the stakeholder requirement is correctly covered by the system requirement.
-Please focus only on verifying the message or signal mentioned, without considering other parts of the requirement.
 Stakeholder Requirement: <stakeholder>{stakeReq}</stakeholder>
 System requirement: <system>{sysReq}</system>
 Only respond with either "Yes" or "No":

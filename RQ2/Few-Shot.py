@@ -267,12 +267,17 @@ def generate_response(bedrock_client, prompt, model_id, history):
 # ======================
 # Prompt creator
 # ======================
+example_data = "" # examples were removed because of data privacy concern
+examples = "\n".join(example_data)
+
 def make_prompt(stake, sys):
     # 这里可以切换不同的 Prompt 模式
     prompt = (
-        f"Please check if the message or signal from the stakeholder requirement is correctly covered by the system requirement.\n"
+        f"Please check if the message or signal from the stakeholder requirement is correctly covered by the system requirement.  Please only focus on verifying the message or signal mentioned, without considering other parts of the requirement. \n"
+        f"Examples: \n <example> {examples} </example> \n"
+        f"Now evaluate teh following step by step and only response with either 'Yes' or 'No': \n"
         f"Stakeholder Requirement: <stakeholder>{stake}</stakeholder> and System Requirement: <system>{sys}</system>.\n"
-        f"Respond with only 'Yes' or 'No'."
+        f"<response>"
     )
     return prompt
 
@@ -361,5 +366,5 @@ if __name__ == "__main__":
             }
             results.append(result)
 
-        with open(f"{modelID}-zeroshot.json", "w") as outfile:
+        with open(f"{modelID}-Few-Shot.json", "w") as outfile:
             json.dump(results, outfile)
